@@ -18,7 +18,7 @@ This provides HTML content for bots to index and, interactive content for users.
 A Nextjs project has a page directory. Each JavaScript file defined here exports a react component that represents a route in the application. The file structure in pages directory mirrors the actual URLs the user will navigate to. Nextjs provide it's own router to make routing seem less.
 Nextjs can provide multiple server routing strategies from a single server project.
 
-Static generation (pre-rendering) allows you to render your pages at build time. Each page or component can implement ***getstaticprops()*** function. The component migh have to fetch data from a cloud database then return props and use the props to render HTML locally. Then upload the HTML to a storage bucked and, be cached by a CDN. Works great for any sort of app that doesn’t change often like a blog.
+Static generation (pre-rendering) allows you to render your pages at build time. Each page or component can implement ***getStaticProps()*** function. The component migh have to fetch data from a cloud database then return props and use the props to render HTML locally. Then upload the HTML to a storage bucked and, be cached by a CDN. Works great for any sort of app that doesn’t change often like a blog.
 
 If the data does change often, you can implement server-side rendering. This builds the HTML page each time it's requested by the user.
 You would do this with ***getServerSideProps()*** function to implement the data fetching and, server-side rendering for the component. This function runs at request time so that data is fetched each time the client requests.
